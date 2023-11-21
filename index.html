@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-1 Website</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Technological Innovation: Electric and Autonomous Vehicles</h1>
+
+    <div class="center-container">
+        <div class="container">
+            <button onclick="openNewPage()" type="button">Learn more about EV's</button>
+        </div>
+    </div>
+    
+
+    <div id="video-container"></div>
+
+    <!-- VideoBackground Javascript Code-->
+    <!-- Below code will make the video to be played in mute -->
+    <script>
+        const VideoBackground = () => {
+            document.getElementById('video-container').innerHTML = 
+            `<iframe src="https://www.youtube.com/embed/XB2g7-HgE_g?&autoplay=1&mute=1" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>`;
+        };
+        
+        VideoBackground();
+
+        function openNewPage() {
+            window.location.href = 'autonomousElectricVehicle.html';
+        }
+    </script>
+    <footer class="footer">&copy;Nov, 2023 Student Meghana Pura Ganapathi</footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citation</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+      <!-- nav defines set of navigation links -->
+    <header>
+        <nav>
+            <a onclick="navigateToThisPage('Home')" id="Home-link">Home</a>
+            <a onclick="navigateToThisPage('Autonomous Electric Vehicle')" id="AutonomousElectricVehicle-link">Autonomous Electric Vehicle</a>
+            <a onclick="navigateToThisPage('Benefits of Autonomous Electric Vehicle')" id="BenefitsofAutonomousElectricVehicle-link">Benefits of Autonomous Electric Vehicle</a>
+            <a onclick="navigateToThisPage('Digital Twin')" id="DigitalTwin-link">Digital Twin</a>
+            <a onclick="navigateToThisPage('Environmental Advantages')" id="EnvironmentalAdvantages-link">Environmental Advantages</a>
+            <a onclick="navigateToThisPage('Citation')" id="Citation-link">Citation</a>
+        </nav>
+    </header>
+
+    <h2>References</h2>
+
+    <ol>
+        <li>(n.d.). What are Autonomous Electric Vehicles? | Virtusa Retrieved from <a href="https://www.virtusa.com/digital-themes/autonomous-electric-vehicles">https://www.virtusa.com/digital-themes/autonomous-electric-vehicles</a></li>
+
+        <li>(n.d.). Autonomous and Electric Vehicles: The future of Mobility Retrieved from <a href="https://www.wevolver.com/article/autonomous-and-electric-vehicles-the-future-of-mobility">https://www.wevolver.com/article/autonomous-and-electric-vehicles-the-future-of-mobility</a></li>
+
+        <li>(n.d.). Why all Av’s should be EV’s | General Motors Retrieved from <a href="https://www.gm.com/stories/all-avs-should-be-evs">https://www.gm.com/stories/all-avs-should-be-evs</a></li>
+
+        <li>(n.d.). The future of Transportation is Autonomous and Electric | Global X ETFs
+            Retrieved from <a href="https://www.globalxetfs.com/future-of-transportation-is-autonomous-electric/">https://www.globalxetfs.com/future-of-transportation-is-autonomous-electric/</a></li>
+
+        <li>Wasim A. Ali, Maria Pia Fanti, Michele Roccotelli & Luigi Ranieri (1992) A Review
+            of Digital Twin Technology for Electric and Autonomous Vehicles</li>
+
+        <li>Electric Vehicles (1994) Retrieved from <a href="https://permanent.fdlp.gov/gpo81153/900L1O00.pdf">https://permanent.fdlp.gov/gpo81153/900L1O00.pdf</a></li>
+        
+    </ol>
+
+    <script>
+        function navigateToThisPage(destination) {
+            var pages = {
+                'Home': 'index.html',
+                'Autonomous Electric Vehicle': 'autonomousElectricVehicle.html',
+                'Benefits of Autonomous Electric Vehicle': 'benefitsofAutonomousEVehicles.html',
+                'Digital Twin': 'digitalTwin.html',
+                'Environmental Advantages': 'envAdvantages.html',
+                'Citation' : 'citation.html',
+            };
+            
+            // home/index.html if no destination is selected 
+            var page = destination ? pages[destination] : 'index.html';
+
+            window.location.href = page;
+
+            // Remove 'active' class from all links
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the clicked link
+            document.getElementById(destination + '-link').classList.add('active');
+        }
+
+         // Check the URL path and apply the 'active' class
+        //  The active page will be highlighted in the header which makes it easier to identify what page the user is currently on 
+        var path = window.location.pathname;
+        if (path.endsWith('index.html')) {
+            document.getElementById('Home-link').classList.add('active');
+        } else if (path.endsWith('autonomousElectricVehicle.html')) {
+            document.getElementById('AutonomousElectricVehicle-link').classList.add('active');
+        } else if (path.endsWith('benefitsofAutonomousEVehicles.html')) {
+            document.getElementById('BenefitsofAutonomousElectricVehicle-link').classList.add('active');
+        } else if (path.endsWith('digitalTwin.html')){
+            document.getElementById('DigitalTwin-link').classList.add('active')
+        } else if (path.endsWith('envAdvantages.html')){
+            document.getElementById("EnvironmentalAdvantages-link").classList.add('active')
+        } else if (path.endsWith("citation.html")){
+            document.getElementById("Citation-link").classList.add('active')
+        }
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,300 @@
+body {
+    margin: 2em;
+    background-color:azure;
+    border: 8px solid transparent;
+    padding: 8px;
+}
+
+header {
+    /* Background color for the webpage */
+    background-color:lightblue;
+    padding: 15px;
+    text-align: center;
+}
+
+/* adding the footer component to the Homepage */
+footer {
+    padding: 10px;
+    float:right; 
+    color:brown;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    /* Adds margin-right to provide space between links */
+    margin-right: 10px; 
+}
+
+/* Hover component */
+nav a:hover {
+    color:saddlebrown;
+}
+
+nav a.active {
+    /* To apply the bgcolor to the active link */
+    background-color:dimgray; 
+    color: white; 
+}
+
+h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    padding: 10px;
+    color:darkslateblue;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    text-decoration: underline;
+    color:darkblue;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 7px;
+}
+
+ol > li {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+li > p {
+    font-weight: normal;
+}
+
+/* This will highlight the text */
+span {
+	background-color:lightpink;
+}
+
+/* This is applied to the button element */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin: 0;
+    margin-top: -350px;
+}
+
+/* Applying CSS Transition on Button in Homepage*/
+.container {
+    transition: width 2s;
+  }
+  
+.container:hover {
+    width: 250px;
+}
+
+button {
+    background-color:lightgrey;
+    color:black;
+    padding: 20px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Applying color on hovering the button */
+button:hover{
+    background-color:skyblue;
+}
+
+#video-container {
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto; 
+    text-align: center;
+    margin-top: -320px;
+}
+
+#video-container iframe {
+    width: 100%; /* Use 100% width of the container */
+    height: 100%; /* Use 100% height of the container */
+    display: block;
+    margin: auto;
+}
+
+#carInForestimg-container, img {
+    width: 100%;
+    height: 100%;
+}
+
+/* container for the image */
+#evimg-container{
+    max-width: 500px;
+    margin: 0 auto;
+    float: right;
+    padding: 10px; 
+}
+
+#evimg-container img {
+    width: 100%;      
+    height: auto;     
+    display: block;   
+    margin: 0 auto;  
+}
+
+#twinimg-container{
+    max-width: 500px;
+    margin: 0 auto;
+    float: left; 
+}
+
+#twinimg-container img {
+    width: 100%;      
+    height: auto;     
+    display: block;   
+    margin: 0 auto;  
+}
+
+#batteryimg-container{
+    max-width: 450px;
+    margin: 0 auto;
+    float: left;
+    padding: 15px; 
+}
+
+#batteryimg-container img {
+    width: 100%;      
+    height: auto;     
+    display: block;   
+    margin: 0 auto;  
+}
+
+#evNatureimg-container{
+    max-width: 450px;
+    margin: 0 auto;
+    float: right;
+    padding: 15px; 
+}
+
+#evNatureimg-container img {
+    width: 100%;      
+    height: auto;     
+    display: block;   
+    margin: 0 auto;  
+}
+
+#grayEVimg-container{
+    max-width: 450px;
+    margin: 0 auto;
+    float: left;
+    padding: 15px; 
+}
+
+#grayEVimg-container img {
+    width: 100%;      
+    height: auto;     
+    display: block;   
+    margin: 0 auto;  
+}
+
+/* Using flex container for Unordered List elements*/
+.flex-container li {
+    display: flex; 
+    margin-right: 10px;
+    background-color: bisque;
+  }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+/* Using the Grid-container for an Image*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr;
+    gap: 10px;
+    float: left; 
+    padding: 15px;
+  }
+
+.grid-container img {
+width: 100%; 
+height: auto; 
+border: 1px solid black; 
+border-radius: 8px; 
+}
+
+/* Styling the form*/
+form {
+    background-color: blanchedalmond;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 1, 0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+input, textarea {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Making the website Reponsive */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px; 
+    }
+
+    .header {
+        padding: 10px; 
+    }
+
+    .nav {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    h1 {
+        margin-top: -10px;
+    }
+
+    button {
+        margin-top: 120px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #video-container {
+        margin-top: -190px;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What are Autonomous Electric Vehicles?</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+     <!-- nav defines set of navigation links -->
+    <header>
+        <nav>
+            <a onclick="navigateToThisPage('Home')" id="Home-link">Home</a>
+            <a onclick="navigateToThisPage('Autonomous Electric Vehicle')" id="AutonomousElectricVehicle-link">Autonomous Electric Vehicle</a>
+            <a onclick="navigateToThisPage('Benefits of Autonomous Electric Vehicle')" id="BenefitsofAutonomousElectricVehicle-link">Benefits of Autonomous Electric Vehicle</a>
+            <a onclick="navigateToThisPage('Digital Twin')" id="DigitalTwin-link">Digital Twin</a>
+            <a onclick="navigateToThisPage('Environmental Advantages')" id="EnvironmentalAdvantages-link">Environmental Advantages</a>
+            <a onclick="navigateToThisPage('Citation')" id="Citation-link">Citation</a>
+        </nav>
+    </header>
+  
+    <h2>What are Autonomous Electric Vehicles?</h2>
+  
+    <div id="carInForestimg-container">
+        <img src="assets/media/carInForest.jpg" alt="Car in a forest">
+    </div>
+   
+    <p>Autonomous electric vehicles (A-VEs) represent a new generation of cars that
+        combine self-driving capabilities with an electric power source, replacing
+        traditional gasoline engines. These vehicles rely on advanced sensor systems
+        and computer vision for navigation, enabling them to navigate roads alongside
+        human-driven vehicles.
+        One prominent player in this field is Tesla, an electric vehicle manufacturer
+        founded by Elon Musk. Tesla is actively engaged in developing autonomous
+        vehicles capable of handling tasks like highway entry and exit. However, it's
+        crucial to emphasize that Tesla's self-driving cars, although groundbreaking, still
+        require human oversight during operation. <span> Traditional car manufacturers are also
+        making significant investments in electric self-driving technology, with the goal of
+        providing advanced driver assistance features by the year 2025. </span>
+        The Robotics Institute at the Carnegie Mellon School of Computer Science has a
+        longstanding commitment to research and development in the realm of
+        autonomous and semi-autonomous technologies. This pursuit traces its origins
+        back to 1984 when the Carnegie Mellon Navigation Lab (Navlab) initiated the
+        development of computer-controlled vehicles and technologies designed to assist
+        human drivers. One of the latest innovations from the Navlab team is Navlab 11,
+        a 2000 Jeep Wrangler, equipped with an array of sensors capable of detecting
+        objects in proximity as well as at a distance.
+    </p>
+
+    <p>
+        Autonomous Electric Vehicles (AEVs) are a fusion of self-driving technology and electric propulsion systems. These vehicles utilize sophisticated sensors like cameras, radar, and lidar, along with AI algorithms, to autonomously navigate without human input. 
+        In terms of propulsion, AEVs employ electric motors powered by rechargeable batteries, typically of the lithium-ion variety. The goal of AEVs is to operate independently, reducing emissions and contributing to a more sustainable transportation landscape. 
+        As technology progresses, AEVs represent a significant transformation in the automotive sector, with ongoing advancements in sensor integration, artificial intelligence, and the necessary infrastructure. Companies are actively involved in the research and development of AEVs, shaping the future of transportation.
+    </p>
+
+    <p>
+        Autonomous Electric Vehicles (AEVs) embody a fusion of two groundbreaking technologies—autonomy and electrification—ushering in a paradigm shift in the realm of transportation. These vehicles seamlessly 
+        integrate electric power systems with advanced autonomous driving capabilities, offering a vision for the future of travel. The incorporation of electric propulsion ensures that AEVs operate with minimal environmental impact, 
+        leveraging clean energy sources and contributing to sustainability. Concurrently, the autonomy component equips these vehicles with an intricate network of sensors, cameras, lidar, radar, and sophisticated algorithms, 
+        enabling them to autonomously perceive and navigate their surroundings.
+    </p>
+
+    <p>
+        AEVs span a spectrum of autonomy levels, ranging from basic driver assistance features to fully self-driving capabilities that empower the vehicle to operate independently 
+        across diverse scenarios. The electrification facet emphasizes the utilization of electric motors powered by high-capacity batteries, 
+        aligning with global efforts to reduce reliance on fossil fuels. Electric propulsion not only supports cleaner transportation but also integrates seamlessly with smart infrastructure elements, 
+        delivering benefits such as quiet operation and instantaneous torque delivery.
+    </p>
+
+    <p>
+        The potential of AEVs extends beyond their environmental advantages. As the technology matures, these vehicles are poised to enhance road safety, alleviate traffic congestion, and reshape urban planning and transportation logistics. Despite the promises, 
+        widespread adoption faces challenges related to regulatory frameworks, infrastructure development, and public acceptance. The intersection of autonomy and electrification represents a dynamic field, with ongoing research, 
+        development, and collaborative efforts across industries aimed at realizing a future where transportation is
+        not only efficient but also intelligent and sustainable.
+    </p>
+
+
+    <script>
+        function navigateToThisPage(destination) {
+            var pages = {
+                'Home': 'index.html',
+                'Autonomous Electric Vehicle': 'autonomousElectricVehicle.html',
+                'Benefits of Autonomous Electric Vehicle': 'benefitsofAutonomousEVehicles.html',
+                'Digital Twin': 'digitalTwin.html',
+                'Environmental Advantages': 'envAdvantages.html',
+                'Citation' : 'citation.html',
+            };
+            
+            // home/index.html if no destination is selected 
+            var page = destination ? pages[destination] : 'index.html';
+
+            window.location.href = page;
+
+            // Remove 'active' class from all links
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the clicked link
+            document.getElementById(destination + '-link').classList.add('active');
+        }
+
+         // Check the URL path and apply the 'active' class
+        //  The active page will be highlighted in the header which makes it easier to identify what page the user is currently on 
+        var path = window.location.pathname;
+        if (path.endsWith('index.html')) {
+            document.getElementById('Home-link').classList.add('active');
+        } else if (path.endsWith('autonomousElectricVehicle.html')) {
+            document.getElementById('AutonomousElectricVehicle-link').classList.add('active');
+        } else if (path.endsWith('benefitsofAutonomousEVehicles.html')) {
+            document.getElementById('BenefitsofAutonomousElectricVehicle-link').classList.add('active');
+        } else if (path.endsWith('digitalTwin.html')){
+            document.getElementById('DigitalTwin-link').classList.add('active')
+        } else if (path.endsWith('envAdvantages.html')){
+            document.getElementById("EnvironmentalAdvantages-link").classList.add('active')
+        } else if (path.endsWith("citation.html")){
+            document.getElementById("Citation-link").classList.add('active')
+        }
+
+    </script>
+    
+</body>
+</html>
